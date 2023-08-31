@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: dark light;
+}
+
+button {
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.title {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.ep-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.video {
+  margin-top: 1rem;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  aspect-ratio: 16 / 9;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.episodes {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .video {
+    width: 360px;
+  }
+  .episodes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
