@@ -6,10 +6,12 @@ const epTitle = $("#epTitle");
 const vidPlayer = $(".video") as HTMLVideoElement;
 const nextBtn = $("#next");
 const prevBtn = $("#prev");
+const subtitles = $("#subtitles") as HTMLTrackElement;
 
 let currentEpisode = 1;
 
 vidPlayer.src = `https://juyjuy3.online/One-Piece.Ep${currentEpisode}.mp4`;
+subtitles.src = `/src/subtitles/ep${currentEpisode}.vtt`;
 
 if (epTitle) {
   epTitle.textContent = "Playing, Episode 1";
@@ -19,6 +21,7 @@ if (nextBtn) {
   nextBtn.addEventListener("click", () => {
     if (currentEpisode != 8) {
       vidPlayer.src = `https://juyjuy3.online/One-Piece.Ep${++currentEpisode}.mp4`;
+      subtitles.src = `/src/subtitles/ep${currentEpisode}.vtt`;
       if (epTitle) {
         epTitle.textContent = `Playing, Episode ${currentEpisode}`;
       }
@@ -32,6 +35,7 @@ if (prevBtn) {
   prevBtn.addEventListener("click", () => {
     if (currentEpisode != 1) {
       vidPlayer.src = `https://juyjuy3.online/One-Piece.Ep${--currentEpisode}.mp4`;
+      subtitles.src = `/src/subtitles/ep${currentEpisode}.vtt`;
       if (epTitle) {
         epTitle.textContent = `Playing, Episode ${currentEpisode}`;
       }
@@ -45,6 +49,7 @@ for (let i = 1; i <= 8; i++) {
   $(`#ep${i}`)?.addEventListener("click", () => {
     currentEpisode = i;
     vidPlayer.src = `https://juyjuy3.online/One-Piece.Ep${i}.mp4`;
+    subtitles.src = `/src/subtitles/ep${i}.vtt`;
     if (epTitle) {
       epTitle.textContent = `Playing, Episode ${i}`;
     }
