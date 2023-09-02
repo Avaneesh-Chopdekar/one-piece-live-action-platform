@@ -39,6 +39,10 @@ button {
   aspect-ratio: 16 / 9;
 }
 
+.video:focus {
+  outline: none;
+}
+
 .btns {
   display: flex;
   justify-content: center;
