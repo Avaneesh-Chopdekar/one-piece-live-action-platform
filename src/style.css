@@ -62,3 +62,17 @@ button {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media screen and (min-width: 1080px) {
+  .episodes {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .episodes {
+    width: 50%;
+    margin: auto;
+  }
+}
